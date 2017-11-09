@@ -123,6 +123,8 @@ function simurgh_scripts() {
 	
 	wp_enqueue_style( 'simurgh-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+	wp_enqueue_style( 'simurgh-no-sidebar' , get_template_directory_uri() . '/layouts/no-sidebar.css');
+
 	wp_enqueue_script( 'simurgh-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'simurgh-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
