@@ -125,6 +125,10 @@ function simurgh_scripts() {
 
 	wp_enqueue_style( 'simurgh-no-sidebar' , get_template_directory_uri() . '/layouts/no-sidebar.css');
 
+	wp_enqueue_script( 'simurgh-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20171110', true );
+
+	wp_enqueue_script( 'simurgh-superfish-settings', get_template_directory_uri() . '/js/superfish-settings.js', array('simurgh-superfish'), '20171110', true );
+
 	wp_enqueue_script( 'simurgh-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'simurgh-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
