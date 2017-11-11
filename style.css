@@ -751,6 +751,8 @@ a:active {
 
 .menu-social li a[href*="github.com"]::before { content: '\f09b'; }
 
+.menu-social li a[href*="last.fm"]::before { content: '\f203'; }
+
 @media screen and (max-width: 600px) {
     #menu-social ul {
 	    position: absolute;
