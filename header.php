@@ -34,6 +34,7 @@
 					'menu_id'        => 'primary-menu',
 				) );
 			?>
+			<?php my_simurgh_social_menu(); ?>
 		</nav><!-- #site-navigation -->
 
 		<div class="site-branding">

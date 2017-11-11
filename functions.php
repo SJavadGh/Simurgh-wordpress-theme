@@ -44,7 +44,8 @@ if ( ! function_exists( 'simurgh_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'simurgh' ),
+			'primary' => esc_html__( 'Primary', 'simurgh' ),
+			'social' => esc_html__( 'Social Menu', 'simurgh' ),
 		) );
 
 		/*
