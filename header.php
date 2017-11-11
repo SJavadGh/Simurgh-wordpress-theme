@@ -34,8 +34,20 @@
 					'menu_id'        => 'primary-menu',
 				) );
 			?>
+
+			<div class="search-toggle">
+    			<i class="fa fa-search"></i>
+    			<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'simurgh' ); ?></a>
+			</div>
+
 			<?php my_simurgh_social_menu(); ?>
 		</nav><!-- #site-navigation -->
+
+		<div id="search-container" class="search-box-wrapper clear">
+    		<div class="search-box clear">
+		        <?php get_search_form(); ?>
+    		</div>
+		</div> 
 
 		<div class="site-branding">
 			<?php

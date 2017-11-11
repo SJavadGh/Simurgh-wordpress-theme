@@ -4,7 +4,7 @@ Theme URI: http://alitaee.xyz/
 Author: AliTaee
 Author URI: http://alitaee.xyz/
 Description: Description
-Version: 0.1.0
+Version: 0.1.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: simurgh
@@ -34,7 +34,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
-# Header 
+# Header
+	## Header search
 # Widgets
 # Content
 	## Posts and pages
@@ -482,8 +483,9 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	background: #000;
-    background: hsl(0, 0%, 0%);
+	background: #ccc;
+	background: hsl(0, 0%, 80%);
+	color: #fff;
 }
 
 select {
@@ -722,7 +724,7 @@ a:active {
     font-size: 20px;
     color: #fff;
     -webkit-font-smoothing: antialiased;
-    content: '\f0c0';
+    content: '\f1d1'; /* When Developer in love with StarWars :D */
 }
 
 .menu-social li a[href*="facebook.com"]::before { content: '\f09a'; }
@@ -757,9 +759,8 @@ a:active {
     #menu-social ul {
 	    position: absolute;
         top: 0;
-        right: .5rem;
+        right: 3rem;
 		display: block;
-		
 	}
 	/* Social Menu height as menu-toggle */
     #menu-social li a { 
@@ -924,6 +925,69 @@ a:active {
 	color: #fff;
 	color: hsl(0, 0%, 100%);
 }
+
+/* Header search */
+
+.search-toggle {
+    float: right;
+    width: 54px;
+    padding: 1.2em .3em;
+    margin-right: 20px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.search-toggle:hover,
+.search-toggle.active {
+    background: #303030;
+	background: hsl(0, 0%, 19%);
+	border-bottom: 1px solid;
+	border-color: #fff;
+	border-color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 600px) {
+    .search-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+		margin-right: 0;
+		padding: .8em .2em;
+	}
+}
+                
+input[type="search"] {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.search-box-wrapper {
+    z-index: 2;
+	width: 100%;
+	display: none;
+}
+
+.search-box {
+    padding: 1em;
+}
+
+.search-box .search-field {
+    max-width: 362px;
+    float: right;
+    padding: 1rem 2rem 1rem 4rem;
+    font-size: 20px;
+    font-size: 1rem;
+    background-color: #fff;
+    border: 0;
+}
+
+.error404 .search-submit,
+.search .search-submit,
+.search-box .search-submit { 
+    display: none; 
+}
+   
 
 /*--------------------------------------------------------------
 # Widgets
