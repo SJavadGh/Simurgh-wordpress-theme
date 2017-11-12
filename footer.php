@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<?php get_sidebar( 'Footer'); ?>
+	<?php get_sidebar( 'footer'); ?>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'simurgh' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
