@@ -529,12 +529,13 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
     position: relative;
-    float: left;
-    width: 100%;
+	max-width: 1040px;
+	max-width: 65rem;
     display: block;
     clear: both;
     font-family: 'Lato', sans-serif;
-    text-transform: uppercase;
+	text-transform: uppercase;
+	margin: 0 auto;
 }
 
 .main-navigation ul {
@@ -933,7 +934,6 @@ a:active {
     float: right;
     width: 54px;
     padding: 1.2em .3em;
-    margin-right: 20px;
     color: #fff;
     text-align: center;
     cursor: pointer;
