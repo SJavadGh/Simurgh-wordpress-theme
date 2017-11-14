@@ -296,7 +296,7 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	/* margin: 0 1.5em; */
 }
 
 address {
@@ -773,29 +773,57 @@ a:active {
 	}
 }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+.post-nav-box {
+    padding: 2em 0;
+    margin-bottom: 4em;
+    border-top:#e0e0e0 solid 1px;
+	border-bottom: #e0e0e0 solid 1px; 
+	width: 90%;
+	margin: 0 auto;
+}
+
+.post-nav-box .post-navigation {
+	padding: 0;
+}
+
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+        font-size: 28.8px;
+        font-size: 1.8rem;
+        font-family: 'Lato', sans-serif;
+        color: #000;
+        color: hsl(0, 0%, 0%);
 }
 
 .comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
+.paging-navigation .nav-previous,
 .post-navigation .nav-previous {
-	float: left;
 	width: 50%;
+    float: left;
+    padding-right: 15%;
 }
 
 .comment-navigation .nav-next,
-.posts-navigation .nav-next,
+.paging-navigation .nav-next,
 .post-navigation .nav-next {
-	float: right;
+        width: 50%;	
+        float: right;
+        padding-left: 15%;
 	text-align: right;
-	width: 50%;
 }
 
+.nav-indicator { 
+    margin-bottom: 1em; 
+}
 
+.nav-previous a,
+.nav-next a { 
+    font-weight: 900; 
+}
+                
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1109,6 +1137,215 @@ input[type="search"] {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+
+/* Typography */
+.entry-title {
+    margin: 0 0 2rem;
+    font-weight: 900;
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1.3em;
+    color: #000;
+    color: hsl(0, 0%, 0%);
+}
+
+.entry-content a { 
+    text-decoration: underline; 
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 { margin-bottom: .4em; }
+
+.entry-content h1 {
+    font-size: 32px;
+    font-size: 2rem;
+}
+
+.entry-content h2 {
+    font-size: 28.8px;
+    font-size: 1.8rem;
+}
+
+.entry-content h3 {
+    font-size: 25.6px;
+    font-size: 1.6rem;
+}
+
+.entry-content h4 {
+    font-size: 22.4px;
+    font-size: 1.4rem;
+}
+
+.entry-content h5 {
+    font-size: 19.2px;
+    font-size: 1.2rem;
+}
+
+.entry-content h6 {
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
+    font-size: 19.2px;
+    font-size: 1.2rem;
+    line-height: 1.4em;
+}
+
+.entry-content blockquote p {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+
+/* Smaller fonts for smaller screens */
+@media screen and (max-width: 680px) {
+    .entry-title {
+        font-size: 19.2px;
+        font-size: 2rem;
+        line-height: 1.3em;
+    }
+    .entry-content h1 {
+        font-size: 16px;
+        font-size: 1.88rem;
+    }
+
+    .entry-content h2 {
+        font-size: 26px;
+        font-size: 1.66rem;
+    }
+
+    .entry-content h3 {
+        font-size: 24px;
+        font-size: 1.55rem;
+    }
+
+    .entry-content h4 {
+        font-size: 22px;
+        font-size: 1.44rem;
+    }
+
+    .entry-content h5 {
+        font-size: 20px;
+        font-size: 1.33rem;
+    }
+
+    .entry-content h6 {
+        font-size: 18px;
+        font-size: 1.22rem;
+    }
+
+    .entry-content p,
+    .entry-content ul,
+    .entry-content ol  {
+        font-size: 16px;
+		font-size: 1rem;
+    }
+    
+    .entry-content blockquote p {
+        font-size: 22.4px;
+        font-size: 1.4rem;
+        line-height: 1.5em;
+    }
+}
+
+/* Blockquotes */
+blockquote {
+    padding: 1em 1.5em 0;
+    margin-bottom: 1em;
+    font-style: italic;
+    border-top: solid 1px hsl(0, 0%, 80%);
+    border-bottom: solid 1px hsl(0, 0%, 80%);
+}
+
+blockquote em { 
+    font-style: normal; 
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 1em;
+    margin-left: 40%;
+    font-size: 16px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    line-height: 1.5em;
+    text-align: right;
+}
+
+blockquote.alignleft {
+    width: 50%;
+    float: left;
+    padding: 1em 0 0;
+    margin-right: 2em;
+}
+
+blockquote.alignright {
+    width: 50%;
+    float: right;
+    padding: 1em 0 0;
+    margin-left: 2em;
+}
+
+/* Meta */
+.cat-links {
+    margin: 1.3em 0 1em;
+    font-family: 'Lato', sans-serif;
+    font-size: 22.4px;
+    font-size: 1.4rem;
+}
+
+.cat-links a {
+    color: #333;
+    color: hsl(0, 0%, 10%);
+}
+
+.cat-links a:hover {
+    color: #000;
+    color: hsl(0, 0%, 0%);
+}
+
+.entry-meta {
+    margin-bottom: 2rem;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 19.2px;
+    font-size: 1.2rem;
+}
+
+.entry-meta a { font-weight: 600; }
+
+.entry-footer {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-size: 1.2rem;
+    line-height: 2em;
+}
+
+.entry-footer ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.entry-footer li {
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+.entry-footer a {
+    margin-left: .5rem;
+}
+
 .sticky {
 	display: block;
 }
@@ -1132,6 +1369,16 @@ input[type="search"] {
 	margin: 0 0 1.5em;
 }
 
+.posted-on:before {
+	content: ' | ';
+}
+.entry-date:after {
+	content: '. ';
+}
+.entry-date:after,
+.posted-on:before {
+	color: #000;
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1197,7 +1444,12 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	padding: 0.8075em 1em;
+	font-size: 16px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    background: #e5e5e5;
+    background: hsl(0, 0%, 90%);
 }
 
 .wp-caption-text {
@@ -1248,10 +1500,6 @@ object {
 
 .gallery-columns-9 .gallery-item {
 	max-width: 11.11%;
-}
-
-.gallery-caption {
-	display: block;
 }
 
 /*--------------------------------------------------------------
