@@ -1546,6 +1546,19 @@ object {
 	display: inline-block;
 }
 
+
+/* Featured Images */
+
+.single-post-thumbnail { 
+    background: #b2b2b2 url(images/pattern.svg) repeat; 
+}
+
+.single-post-thumbnail img {
+    display: block;
+    margin: 0 auto;
+}
+                
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
