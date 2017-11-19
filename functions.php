@@ -42,7 +42,7 @@ if ( ! function_exists( 'simurgh_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size('large-thumb' , 1060 , 650 , true);
-		add_image_size('index-thumb' , 780 , 250 , true);
+		add_image_size('index-thumb' , 1060 , 300 , true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(

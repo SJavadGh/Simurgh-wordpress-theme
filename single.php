@@ -7,7 +7,7 @@
  * @package Simurgh
  */
 
-get_header(); ?>
+get_header('post'); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -15,7 +15,7 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			get_template_part( 'template-parts/content', 'single' );
 
 			echo '<div class="post-nav-box">';
 			the_post_navigation();

@@ -36,10 +36,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Clearings
 # Header
 	## Header search
+	## Post Header
 # Widgets
 # Content
 	## Posts and pages
 	## Comments
+	## Index and Archive
 # Infinite scroll
 # Media
 	## Captions
@@ -293,10 +295,6 @@ p {
 
 dfn, cite, em, i {
 	font-style: italic;
-}
-
-blockquote {
-	/* margin: 0 1.5em; */
 }
 
 address {
@@ -1023,7 +1021,25 @@ input[type="search"] {
 .search-box .search-submit { 
     display: none; 
 }
-   
+
+/*--------------------------------------------------------------
+## post Header
+--------------------------------------------------------------*/
+.post-header {
+	padding-bottom: 12em;
+}
+
+@media screen and ( min-width: 601px ) and ( max-width: 1040px) {
+	.post-header {
+		padding-bottom: 9em;
+	}	
+}
+
+@media screen and (max-width: 600px) {
+	.post-header {
+		padding-bottom: 5.5em;
+	}
+}
 
 /*--------------------------------------------------------------
 # Widgets
@@ -1386,6 +1402,7 @@ blockquote.alignright {
 .posted-on:before {
 	color: #000;
 }
+				
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1506,6 +1523,19 @@ ol.comment-list > li:last-child .comment-body {
     background: #84bd68;
     background: hsl(100, 39%, 57%);
 }
+
+/*--------------------------------------------------------------
+## Index and Archive
+--------------------------------------------------------------*/
+
+.continue-reading {
+    margin: 0 4rem;
+    font-weight: 900;
+    font-size: 18px;
+    font-size: 1.2rem;
+}
+
+.continue-reading i { margin-left: .5em; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
