@@ -31,6 +31,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Menus
 		### Small menu
 		### Social menu
+		### Paging Navigation
 # Accessibility
 # Alignments
 # Clearings
@@ -827,6 +828,45 @@ a:active {
     margin: 3em 0;
     border-top: #e0e0e0 solid 1px;
     border-bottom: #e0e0e0 solid 1px;  
+}
+
+/*--------------------------------------------------------------
+### Paging Navigation
+--------------------------------------------------------------*/
+
+.paging-navigation ul {
+    margin: 0;
+}
+
+ul.page-numbers {
+	padding-inline-start: 0;
+	-webkit-padding-start: 0;
+}
+
+.paging-navigation li {
+	 display: inline;
+}
+
+.paging-navigation .page-numbers {
+	text-align: center;
+}
+
+a.page-numbers,
+span.page-numbers {
+     padding: .3em .7em;
+     color: #333;
+     color: hsl(0, 0%, 20%);
+}
+
+a:hover.page-numbers {
+    color: #000;
+    color: hsl(0, 0%, 0%);
+}
+
+.paging-navigation .current {
+    font-weight: bold;
+    color: #000;
+    color: hsl(0, 0%, 0%);
 }
                 
 /*--------------------------------------------------------------
