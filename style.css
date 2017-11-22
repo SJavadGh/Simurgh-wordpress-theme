@@ -1608,7 +1608,19 @@ ol.comment-list > li:last-child .comment-body {
 		margin-top: 2.5em;
 	}
 }
-              
+
+.page-header .page-title {
+	color: #333;
+	line-height: 1.13;
+}
+
+.archive-description {
+    font-family: 'Lato', sans-serif;
+	font-style: italic;
+	margin-bottom: 3em;
+	border-bottom: 1px solid #e0e0e0;
+} 
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

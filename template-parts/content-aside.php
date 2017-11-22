@@ -22,7 +22,7 @@
 				 );
 				echo '<div class="aside-by"';
 		 		echo '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-				echo '<i class="fa fa-pencil aside-post" aria-hidden="true"></i>'; // Display a pencil icon in the bottom right
+				echo '<i class="fa fa-pencil-square-o aside-post" aria-hidden="true"></i>'; // Display a pencil icon in the bottom right
 				echo '<div>' 
 			?>
 		</div>

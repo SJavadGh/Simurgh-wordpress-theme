@@ -6,7 +6,6 @@
  *
  * @package Simurgh
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -19,9 +18,8 @@
 	?>       
 
 	<header class="entry-header">
-
+	
 	<?php
-		
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'simurgh' ) );
 		if ( $categories_list ) {
@@ -91,7 +89,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		
 		<?php
     		echo get_the_tag_list( '<ul><li><i class="fa fa-tag"></i>', '</li><li><i class="fa fa-tag"></i>', '</li></ul>' );
 		?>
