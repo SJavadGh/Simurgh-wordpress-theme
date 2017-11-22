@@ -50,6 +50,9 @@ if ( ! function_exists( 'simurgh_setup' ) ) :
 			'social' => esc_html__( 'Social Menu', 'simurgh' ),
 		) );
 
+		//Enable support for post formats.
+		add_theme_support( 'post-formats', array('aside') );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.

@@ -1577,13 +1577,38 @@ ol.comment-list > li:last-child .comment-body {
 
 .continue-reading i { margin-left: .5em; }
 
-
 .sticky-post {
     position: absolute;
     top: 1rem;
     right: 3rem;
 }
-                
+
+.aside-post, 
+.format-aside .byline {
+	position: absolute;
+	bottom: 0;
+	right: 3rem;
+}
+
+.format-aside .byline {
+	right: 5rem;
+}
+
+.aside .byline a {
+	text-decoration: none;
+}
+ 
+.format-aside .aside {
+	border-left: 3px solid #000;
+	padding-left: 1.5em;
+}
+
+@media screen and (max-width: 600px) {
+	.aside-by {
+		margin-top: 2.5em;
+	}
+}
+              
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
