@@ -961,7 +961,9 @@ a:hover.page-numbers {
     font-size: 40px;
     font-size: 2.5rem;
     text-transform: uppercase;
-    line-height: normal;
+	line-height: normal;
+	margin: 0.67em 0;
+	font-family: 'Lato', sans-serif;
 }
 
 .site-title a {
