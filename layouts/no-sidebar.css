@@ -39,7 +39,9 @@
 .tag-links,
 .post-navigation,
 .comments-area,
-.paging-navigation {
+.paging-navigation,
+.entry-summary,
+.page-content {
     position: relative;
     max-width: 1248px;
     max-width: 78rem;
@@ -47,13 +49,15 @@
     margin: 0 auto;
 }
 
+/* index-box post index */
 .index-box {
-    max-width: 780px;
+    max-width: 1248px;
     max-width: 78rem;
     padding: 0 0 2em;
     margin: 0 auto 2em;
 }
 
+/* Better responsive navigation page */
 @media screen and (max-width: 600px) {
     ul.page-numbers .prev,
     ul.page-numbers .next {

@@ -11,13 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="index-box">
 	<?php 
-    	if (has_post_thumbnail()) {
-			echo '<div class="single-post-thumbnail clear">';
-			echo '<a href="' . get_permalink() . '" title="' . __('Click to read ', 'simurgh') . get_the_title() . '" rel="bookmark">';
-			echo the_post_thumbnail('index-thumb');
-			echo '</a>';
-        	echo '</div>';
-    	}
+    	simurgh_thumbnail_cover(); // show thumbnail image post
 	?>       
 
 	<header class="entry-header">

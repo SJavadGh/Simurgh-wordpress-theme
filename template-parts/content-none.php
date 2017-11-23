@@ -38,13 +38,13 @@
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'simurgh' ); ?></p>
 			<?php
 				get_search_form();
-
+				content_search_help(); // help user to found content
 		else : ?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'simurgh' ); ?></p>
 			<?php
 				get_search_form();
-
+				content_search_help(); // help user to found content
 		endif; ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

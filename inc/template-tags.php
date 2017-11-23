@@ -134,6 +134,59 @@ if ( ! function_exists( 'simurgh_entry_footer' ) ) :
 	}
 endif;
 
+// show cover thumbnail image in index, search and ...
+if ( ! function_exists( 'simurgh_thumbnail_cover' ) ) :
+	function simurgh_thumbnail_cover() {
+		if (has_post_thumbnail()) {
+			echo '<div class="single-post-thumbnail clear">';
+			echo '<a href="' . get_permalink() . '" title="' . __('Click to read ', 'simurgh') . get_the_title() . '" rel="bookmark">';
+			echo the_post_thumbnail('index-thumb');
+			echo '</a>';
+			echo '</div>';
+		}
+	}	
+endif;
+
+// show large thumbnail image in post and pages
+if ( ! function_exists( 'simurgh_thumbnail_large' ) ) :
+	function simurgh_thumbnail_large() {
+    	if (has_post_thumbnail()) {
+	        echo '<div class="single-post-thumbnail clear">';
+        	echo the_post_thumbnail('large-thumb');
+        	echo '</div>';
+    	}
+	}	
+endif;
+
+// help user to found content
+if ( ! function_exists( 'content_search_help' ) ) :
+	function content_search_help() {
+
+		the_widget( 'WP_Widget_Recent_Posts' );
+		
+		echo '<div class="widget widget_categories">';
+		echo '<h2 class="widget-title">' . esc_html_e( 'Most Used Categories', 'simurgh' ) . '</h2>';
+		 
+		echo '<ul>';
+			wp_list_categories( array(
+				'orderby'    => 'count',
+				'order'      => 'DESC',
+				'show_count' => 1,
+				'title_li'   => '',
+				'number'     => 10,
+			) );
+		echo '</ul>';
+		echo '</div><!-- .widget -->';
+		
+		/* translators: %1$s: smiley */
+		$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'simurgh' ), convert_smilies( ':)' ) ) . '</p>';
+		the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+
+		the_widget( 'WP_Widget_Tag_Cloud' );
+
+	}	
+endif;
+
 
 /*
  * Social media icon menu as per http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2
